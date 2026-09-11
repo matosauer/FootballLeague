@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="readme.txt" />
+  </Folder>
+  <Project Path="EntityFrameworkCore.ConsoleApp/EntityFrameworkCore.ConsoleApp.csproj" />
+  <Project Path="EntityFrameworkCore.Data/EntityFrameworkCore.Data.csproj" />
+  <Project Path="EntityFrameworkCore.Domain/EntityFrameworkCore.Domain.csproj" />
+</Solution>
