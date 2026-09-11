@@ -20,12 +20,13 @@ public class ConsoleApp : IConsoleApp
     {
         if (Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT") == "Development")
         {
-            await _teamExplorer.SeedAsync();
+            //await _teamExplorer.SeedAsync();
         }
 
         Console.WriteLine("Go: ------------------");
 
-        //await _teamExplorer.PrintAllTeamsAsync();
+        await _teamExplorer.PrintAllTeamsAsync();
+
         //await _teamExplorer.PrintTeamsByLeagueAsync("Premier League");
         //await _teamExplorer.PrintNPlusOne();
         //await _teamExplorer.QueryFiltersAsync();
@@ -50,7 +51,7 @@ public class ConsoleApp : IConsoleApp
         //await _teamExplorer.RawSQLQueryAsync();
         //await _teamExplorer.ExecuteNonQueryCommandAsync();
         //await _teamExplorer.ExecStoredProcedureAsync();
-        await _teamExplorer.ExecStoredProceInMemoryAsync();
+        //await _teamExplorer.ExecStoredProceInMemoryAsync();
 
 
     }

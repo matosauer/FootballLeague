@@ -4,6 +4,7 @@ using EntityFrameworkCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkCore.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260911085325_AddIndexes")]
+    partial class AddIndexes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,20 +51,6 @@ namespace EntityFrameworkCore.Data.Migrations
                         .HasFilter("[TeamId] IS NOT NULL");
 
                     b.ToTable("Coaches");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 20,
-                            Name = "John Doe",
-                            TeamId = 20
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Name = "Jane Smith",
-                            TeamId = 21
-                        });
                 });
 
             modelBuilder.Entity("EntityFrameworkCore.Domain.League", b =>
@@ -81,18 +70,6 @@ namespace EntityFrameworkCore.Data.Migrations
                     b.HasIndex("Name");
 
                     b.ToTable("Leagues");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 20,
-                            Name = "Sample League"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Name = "Sample League 2"
-                        });
                 });
 
             modelBuilder.Entity("EntityFrameworkCore.Domain.Match", b =>
@@ -145,32 +122,6 @@ namespace EntityFrameworkCore.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Teams");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 20,
-                            LeagueId = 20,
-                            Name = "Team A"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            LeagueId = 20,
-                            Name = "Team B"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            LeagueId = 21,
-                            Name = "Team C"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            LeagueId = 21,
-                            Name = "Team D"
-                        });
                 });
 
             modelBuilder.Entity("EntityFrameworkCore.Domain.TeamsCoachesLeaguesView", b =>
