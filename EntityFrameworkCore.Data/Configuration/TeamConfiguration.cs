@@ -21,10 +21,10 @@ namespace EntityFrameworkCore.Data.Configuration
                 .IsRequired();
 
             builder.HasData(
-                new Team { Id = 20, Name = "Team A", LeagueId = 20 },
-                new Team { Id = 21, Name = "Team B", LeagueId = 20 },
-                new Team { Id = 22, Name = "Team C", LeagueId = 21 },
-                new Team { Id = 23, Name = "Team D", LeagueId = 21 }
+                new Team { Id = 1, Name = "Manchester United", LeagueId = 1 },
+                new Team { Id = 2, Name = "Liverpool", LeagueId = 1 },
+                new Team { Id = 3, Name = "Bayern Munich", LeagueId = 2 },
+                new Team { Id = 4, Name = "Borussia Dortmund", LeagueId = 2 }
             );
         }
     }

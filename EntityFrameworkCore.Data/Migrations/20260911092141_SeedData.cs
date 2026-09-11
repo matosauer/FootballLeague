@@ -17,8 +17,10 @@ namespace EntityFrameworkCore.Data.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { 20, "Sample League" },
-                    { 21, "Sample League 2" }
+                    { 1, "Premier League" },
+                    { 2, "La Liga" },
+                    { 3, "Bundesliga" },
+                    { 4, "Serie A" }
                 });
 
             migrationBuilder.InsertData(
@@ -26,10 +28,10 @@ namespace EntityFrameworkCore.Data.Migrations
                 columns: new[] { "Id", "LeagueId", "Name" },
                 values: new object[,]
                 {
-                    { 20, 20, "Team A" },
-                    { 21, 20, "Team B" },
-                    { 22, 21, "Team C" },
-                    { 23, 21, "Team D" }
+                    { 1, 1, "Manchester United" },
+                    { 2, 1, "Liverpool" },
+                    { 3, 2, "Bayern Munich" },
+                    { 4, 2, "Borussia Dortmund" }
                 });
 
             migrationBuilder.InsertData(
@@ -37,8 +39,8 @@ namespace EntityFrameworkCore.Data.Migrations
                 columns: new[] { "Id", "Name", "TeamId" },
                 values: new object[,]
                 {
-                    { 20, "John Doe", 20 },
-                    { 21, "Jane Smith", 21 }
+                    { 1, "John Doe", 1 },
+                    { 2, "Jane Smith", 2 }
                 });
         }
 
@@ -48,42 +50,52 @@ namespace EntityFrameworkCore.Data.Migrations
             migrationBuilder.DeleteData(
                 table: "Coaches",
                 keyColumn: "Id",
-                keyValue: 20);
+                keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Coaches",
                 keyColumn: "Id",
-                keyValue: 21);
-
-            migrationBuilder.DeleteData(
-                table: "Teams",
-                keyColumn: "Id",
-                keyValue: 22);
-
-            migrationBuilder.DeleteData(
-                table: "Teams",
-                keyColumn: "Id",
-                keyValue: 23);
+                keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Leagues",
                 keyColumn: "Id",
-                keyValue: 21);
-
-            migrationBuilder.DeleteData(
-                table: "Teams",
-                keyColumn: "Id",
-                keyValue: 20);
-
-            migrationBuilder.DeleteData(
-                table: "Teams",
-                keyColumn: "Id",
-                keyValue: 21);
+                keyValue: 3);
 
             migrationBuilder.DeleteData(
                 table: "Leagues",
                 keyColumn: "Id",
-                keyValue: 20);
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "Teams",
+                keyColumn: "Id",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Teams",
+                keyColumn: "Id",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "Leagues",
+                keyColumn: "Id",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Teams",
+                keyColumn: "Id",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "Teams",
+                keyColumn: "Id",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Leagues",
+                keyColumn: "Id",
+                keyValue: 1);
         }
     }
 }

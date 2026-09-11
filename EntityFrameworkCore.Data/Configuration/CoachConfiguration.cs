@@ -10,8 +10,8 @@ namespace EntityFrameworkCore.Data.Configuration
         {
             builder.HasIndex(h => new { h.Name, h.TeamId }).IsUnique();
             builder.HasData(
-                new Coach { Id = 20, Name = "John Doe", TeamId = 20 },
-                new Coach { Id = 21, Name = "Jane Smith", TeamId = 21 }
+                new Coach { Id = 1, Name = "John Doe", TeamId = 1 },
+                new Coach { Id = 2, Name = "Jane Smith", TeamId = 2 }
             );
 
         }

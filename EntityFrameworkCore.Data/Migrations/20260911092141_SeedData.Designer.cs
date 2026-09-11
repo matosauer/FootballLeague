@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkCore.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260911085832_SeedData")]
+    [Migration("20260911092141_SeedData")]
     partial class SeedData
     {
         /// <inheritdoc />
@@ -55,15 +55,15 @@ namespace EntityFrameworkCore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 20,
+                            Id = 1,
                             Name = "John Doe",
-                            TeamId = 20
+                            TeamId = 1
                         },
                         new
                         {
-                            Id = 21,
+                            Id = 2,
                             Name = "Jane Smith",
-                            TeamId = 21
+                            TeamId = 2
                         });
                 });
 
@@ -88,13 +88,23 @@ namespace EntityFrameworkCore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 20,
-                            Name = "Sample League"
+                            Id = 1,
+                            Name = "Premier League"
                         },
                         new
                         {
-                            Id = 21,
-                            Name = "Sample League 2"
+                            Id = 2,
+                            Name = "La Liga"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Bundesliga"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Serie A"
                         });
                 });
 
@@ -152,27 +162,27 @@ namespace EntityFrameworkCore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 20,
-                            LeagueId = 20,
-                            Name = "Team A"
+                            Id = 1,
+                            LeagueId = 1,
+                            Name = "Manchester United"
                         },
                         new
                         {
-                            Id = 21,
-                            LeagueId = 20,
-                            Name = "Team B"
+                            Id = 2,
+                            LeagueId = 1,
+                            Name = "Liverpool"
                         },
                         new
                         {
-                            Id = 22,
-                            LeagueId = 21,
-                            Name = "Team C"
+                            Id = 3,
+                            LeagueId = 2,
+                            Name = "Bayern Munich"
                         },
                         new
                         {
-                            Id = 23,
-                            LeagueId = 21,
-                            Name = "Team D"
+                            Id = 4,
+                            LeagueId = 2,
+                            Name = "Borussia Dortmund"
                         });
                 });
 
